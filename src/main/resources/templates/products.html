@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<html>
+<head>
+    <title>Sportswear Shop</title>
+    <style>
+    	#ddd {
+    		margin: 20px;
+    	}
+    </style>
+</head>
+<body>
+<main>
+    <div id="ddd" class="container">
+        <ul class="list-group" >
+            <li th:each="p : ${productList}" class="list-group-item list-group-item-default">
+            	<a th:href="@{'/products/' + ${p.id}}" th:text="${'ID: ' + p.id + '   Name: ' + p.name}"></a>
+            </li>
+        </ul>
+    </div>
+</main>
+
+</body>
+</html>
