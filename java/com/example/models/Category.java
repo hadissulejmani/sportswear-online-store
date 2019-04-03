@@ -3,7 +3,7 @@ package com.example.models;
 public class Category {
 	Long id;
 	String name;
-	
+	public Category(){}
 	public Category(Long id, String name) {
 		super();
 		this.id = id;

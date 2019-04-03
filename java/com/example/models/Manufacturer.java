@@ -2,7 +2,8 @@ package com.example.models;
 
 public class Manufacturer {
 	Long id;
-	String name;
+	String name = null;
+	public Manufacturer(){}
 	public Manufacturer(Long id, String name) {
 		super();
 		this.id = id;
