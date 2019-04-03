@@ -1,0 +1,30 @@
+
+<html>
+<head>
+    <title>Sportswear Shop</title>
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css">
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+    <script src="/assets/vendor/popper.min.js"></script>
+    <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <style>
+        .center-div {
+            margin: 0 auto;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="u-steps-v3">
+            <span th:text="${'Id:  ' + product.id}"></span><br>
+            <span th:text="${'Name:  ' + product.name}"></span><br>
+            <span th:text="${'Content:  ' + product.content}"></span><br>
+            <span th:text="${'URL:  ' + product.url}"></span><br>
+            <span th:text="${'Category:  ' + product.category.name}"></span><br>
+            <span th:text="${'Manufacturer:  ' + product.manufacturer.name}"></span>
+    </div>
+</main>
+
+</body>
+</html>

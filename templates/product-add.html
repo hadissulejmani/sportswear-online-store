@@ -1,0 +1,53 @@
+
+<html>
+<head>
+    <title>Sportswear Shop</title>
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css">
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+    <script src="/assets/vendor/popper.min.js"></script>
+    <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+</head>
+<body>
+<main>
+    <div class="container">
+        <form class="form" enctype="multipart/form-data" method="post" action="/products">
+            <div class="form-group">
+                <label for="productId">Id</label>
+                <input id="productId" type="number" class="form-control" th:field="*{newProduct.id}" name="id" placeholder="Enter id" required>
+            </div>
+            <div class="form-group">
+                <label for="productName">Name</label>
+                <input id="productName" type="productName" class="form-control" th:field="*{newProduct.name}" name="name" placeholder="Enter name" required>
+            </div>
+            <div class="form-group">
+                <label for="productContent">Content</label>
+                <input id="productContent" class="form-control" type="text" th:field="*{newProduct.content}" name="content" placeholder="Enter content" required>
+            </div>
+            <div class="form-group">
+                <label for="productUrl">Url</label>
+                <input id="productUrl" type="productUrl" class="form-control" th:field="*{newProduct.url}" name="url" placeholder="Enter url" required>
+            </div>
+            <div class="form-group">
+                <label>Manufacturer:</label>
+                <select class="form-control" th:field="*{newProduct.manufacturer.id}" required>
+                    <option th:each="m : ${manufacturerList}" th:value="${m.id}" th:text="${m.name}">
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Category:</label>
+                <select class="form-control" th:field="*{newProduct.category.id}" required>
+                    <option th:each="c : ${categoryList}" th:value="${c.id}" th:text="${c.name}">
+                    </option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</main>
+
+</body>
+</html>
