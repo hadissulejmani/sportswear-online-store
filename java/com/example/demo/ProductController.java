@@ -15,6 +15,8 @@ import org.springframework.validation.BindingResult;
 import com.example.models.Category;
 import com.example.models.Manufacturer;
 import com.example.models.Product;
+import org.springframework.web.multipart.MultipartFile;
+
 import java.io.IOException;
 import java.util.Optional;
 
@@ -47,12 +49,14 @@ public class ProductController {
         categories.add(c2);
         categories.add(c3);
 
+        String u = "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+
         productList = new ArrayList<>();
-        productList.add(new Product(Long.parseLong("1"), "Bruno", "Kurxho hic", "", c1, m));
-        productList.add(new Product(Long.parseLong("1"), "Mars", "Kurxho hic", "", c1, m));
-        productList.add(new Product(Long.parseLong("1"), "Zambac", "Kurxho hic", "", c2, n));
-        productList.add(new Product(Long.parseLong("1"), "Sephora", "Kurxho hic", "", c2, k));
-        productList.add(new Product(Long.parseLong("1"), "Selenica", "Kurxho hic", "", c3, k));
+        productList.add(new Product(Long.parseLong("1"), "Bruno", "Kurxho hic", u, c1, m));
+        productList.add(new Product(Long.parseLong("1"), "Mars", "Kurxho hic", u, c1, m));
+        productList.add(new Product(Long.parseLong("1"), "Zambac", "Kurxho hic", u, c2, n));
+        productList.add(new Product(Long.parseLong("1"), "Sephora", "Kurxho hic", u, c2, k));
+        productList.add(new Product(Long.parseLong("1"), "Selenica", "Kurxho hic", u, c3, k));
     }
 
     @GetMapping("")

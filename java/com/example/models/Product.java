@@ -9,6 +9,7 @@ public class Product {
 	Category category;
 	Manufacturer manufacturer;
 
+
 	public Product() {
 		
 	}
